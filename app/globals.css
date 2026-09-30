@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --muc-blue: #0877c9;
+  --muc-red: #c80e1a;
+  --muc-navy: #0a1f33;
+  --muc-ink: #152536;
+  --muc-muted: #667384;
+  --muc-soft: #f4f7fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #fff;
+  color: var(--muc-ink);
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+::selection {
+  background: rgba(8, 119, 201, 0.18);
+  color: var(--muc-navy);
+}
+
+.font-display {
+  font-family: "Manrope", sans-serif;
+}
+
+.container-x {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(10, 31, 51, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 31, 51, 0.045) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.hero-orb {
+  filter: blur(0);
+}
+
+.reveal-line {
+  position: relative;
+  overflow: hidden;
+}
+.reveal-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  transform-origin: right;
+  animation: wipe 1.05s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+@keyframes wipe {
+  to {
+    transform: scaleX(0);
+  }
+}
+
+.float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.card-hover {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px rgba(10, 31, 51, 0.11);
+  border-color: rgba(8, 119, 201, 0.24);
+}
+
+.portfolio-image {
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.portfolio-card:hover .portfolio-image {
+  transform: scale(1.055);
+}
+
+@media (max-width: 640px) {
+  .container-x {
+    width: min(100% - 28px, 1180px);
+  }
+}
+
+/* =========================================================
+   HERO PROJECT IMAGE
+   The source project photos are portrait images and some
+   contain baked-in black bars. We intentionally zoom/crop
+   them so the website reads them as photography rather
+   than screenshots.
+========================================================= */
+
+.hero-project-image {
+  transition:
+    transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 500ms ease;
+  will-change: transform;
+  filter: saturate(0.92) contrast(1.02);
+}
+
+.group:hover .hero-project-image {
+  filter: saturate(1) contrast(1.04);
+}
