@@ -11,7 +11,7 @@ export default function Products() {
   return (
     <section id="products" className="py-24 lg:py-28">
       <div className="container-x">
-        <SectionHeading eyebrow="Products & Services" title="From everyday essentials to operational equipment." description="MUC menyediakan berbagai kategori supply untuk membantu perusahaan memenuhi kebutuhan operasional melalui satu partner." />
+        <SectionHeading eyebrow="Products & Services" title="Beragam produk untuk kebutuhan operasional Perusahaan." description="MUC menyediakan beragam kategori produk untuk mendukung perusahaan memenuhi kebutuhan operasional melalui partner supplier andalan." />
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {products.map(({ no, icon: Icon, title, text }) => (
             <article key={no} className="card-hover group rounded-[28px] border border-slate-200 bg-white p-7">

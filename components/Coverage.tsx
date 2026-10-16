@@ -7,7 +7,7 @@ export default function Coverage() {
         <div className="grid items-center gap-10 lg:grid-cols-[1fr_.9fr]">
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[.2em] text-muc-red">Operational Coverage</p>
-            <h2 className="mt-3 font-display text-4xl font-extrabold tracking-tight text-muc-navy lg:text-5xl">Serving business needs across Jakarta & Kalimantan.</h2>
+            <h2 className="mt-3 font-display text-4xl font-extrabold tracking-tight text-muc-navy lg:text-5xl">Melayani kebutuhan operasional Perusahaan di Jakarta dan Kalimantan.</h2>
             <p className="mt-5 max-w-xl text-sm leading-7 text-muc-muted">MUC saat ini melayani kebutuhan perusahaan di wilayah Jakarta dan Kalimantan, dengan cakupan yang terus diperkuat seiring perkembangan kerja sama.</p>
           </div>
           <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">

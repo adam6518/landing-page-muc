@@ -15,7 +15,7 @@ export default function WhyMuc() {
       <div className="absolute -right-28 -top-28 h-72 w-72 rounded-full bg-muc-blue/20 blur-3xl" />
       <div className="absolute -bottom-32 left-0 h-72 w-72 rounded-full bg-muc-red/15 blur-3xl" />
       <div className="container-x relative">
-        <SectionHeading eyebrow="Why MUC" title="More than a supplier. A partner for your operations." description="Nilai layanan MUC dibangun dari konsistensi kualitas, harga, service, ketersediaan, dan hubungan jangka panjang." dark />
+        <SectionHeading eyebrow="Why MUC" title="Partner untuk Optimalkan Operasional Perusahaan Anda" description="Nilai layanan MUC dibangun dari konsistensi kualitas, harga, service, ketersediaan, dan hubungan jangka panjang." dark />
         <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-5">
           {reasons.map(([Icon, title, text]) => {
             const LucideIcon = Icon as typeof BadgeCheck;
